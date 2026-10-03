@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
+}
+@layer base {
+  body {
+    @apply m-0 text-zinc-800 bg-[#fafafa] text-sm antialiased;
+  }
+  button {
+    @apply cursor-pointer disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  input,
+  textarea,
+  select {
+    @apply outline-none focus:ring-2 focus:ring-zinc-300;
+  }
+}
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-zinc-200 bg-white px-3 py-2 text-xs font-medium hover:bg-zinc-100 transition-colors;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-zinc-900 bg-zinc-900 px-4 py-2 text-xs font-medium text-white hover:bg-zinc-700;
+  }
+  .input {
+    @apply w-full rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm;
+  }
+  .label {
+    @apply mb-2 block text-xs font-medium text-zinc-600;
+  }
+  .panel-title {
+    @apply text-[10px] uppercase tracking-[0.16em] font-semibold text-zinc-400;
+  }
+}
+.react-flow__handle {
+  width: 10px !important;
+  height: 10px !important;
+  background: white !important;
+  border: 2px solid #71717a !important;
+}
+.react-flow__edge-path {
+  stroke: #a1a1aa;
+  stroke-width: 1.6;
+}
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #18181b;
+  stroke-width: 2.5;
+}
+.react-flow__controls {
+  box-shadow: 0 2px 12px #00000008 !important;
+  border: 1px solid #e4e4e7;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.react-flow__attribution {
+  font-size: 9px !important;
+  background: transparent !important;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 6px;
+}
